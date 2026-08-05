@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "videos": [
+    {
+      "id": "adapter-promo",
+      "title": "One Works Adapter Promo",
+      "status": "published",
+      "creativeRecord": "docs/creative/adapter-promo.md",
+      "scenario": "launcher-open-workspace-adapter-tour",
+      "fixture": "adapter-promo",
+      "capture": {
+        "source": "macos-system-display",
+        "windowSequence": ["launcher", "workspace", "adapter-selector"],
+        "realProductPixelsOnly": true,
+        "recordingDisplayRequired": true
+      },
+      "postproduction": {
+        "module": "src/postproduction/adapter-intro.ts",
+        "introDurationMs": 3800,
+        "realWindowEntrance": { "direction": "up", "startMs": 3000, "durationMs": 800 },
+        "iconMotion": "scale-toward-viewer-and-fade",
+        "addedIconBackgrounds": false,
+        "adapterIcons": ["claude-code", "codex", "copilot", "gemini", "kimi", "opencode"],
+        "camera": {
+          "event": "adapter-selector-click",
+          "scale": 1.55,
+          "durationMs": 1300,
+          "offset": { "x": 70, "y": 55 },
+          "finalHoldMs": 4500
+        },
+        "cursorLeadsInput": true,
+        "captureStartupLatencyCompensated": true
+      },
+      "matrix": {
+        "languages": ["en", "zh"],
+        "themes": ["light", "dark"],
+        "variants": ["light-en", "dark-en", "light-zh", "dark-zh"]
+      },
+      "safeFixture": {
+        "visibleWorkspacePath": "/Users/oneworks/Projects/oneworks-demo",
+        "visibleIdentity": "demo@oneworks.ai",
+        "mapsToIsolatedWorkspace": true,
+        "privateConfigurationDisabled": true
+      },
+      "masters": {
+        "committed": false,
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "durationSeconds": 21
+      },
+      "webDerivatives": {
+        "videoCodec": "h264",
+        "pixelFormat": "yuv420p",
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "audio": false,
+        "fastStart": true,
+        "targetSizeMb": [1.0, 1.1],
+        "gifDirectory": ".oo/docs/images/adapter-promo",
+        "posterDirectory": ".oo/docs/images/adapter-promo/posters",
+        "videoDirectory": ".oo/docs/videos/adapter-promo"
+      },
+      "displaySurfaces": [
+        { "repository": "oneworks-ai/app", "path": "README.md", "role": "english-theme-aware-gif" },
+        { "repository": "oneworks-ai/app", "path": "README.zh-Hans.md", "role": "chinese-theme-aware-gif" },
+        { "repository": "oneworks-ai/app", "path": ".oo/docs/index.md", "role": "chinese-theme-aware-video" },
+        { "repository": "oneworks-ai/app", "path": ".oo/docs/en/index.md", "role": "english-theme-aware-video" },
+        { "repository": "oneworks-ai/app", "path": ".oo/docs/usage/desktop.md", "role": "chinese-posters" },
+        { "repository": "oneworks-ai/app", "path": ".oo/docs/en/usage/desktop.md", "role": "english-posters" },
+        { "url": "https://oneworks.cloud/docs/", "role": "live-chinese-docs" },
+        { "url": "https://oneworks.cloud/docs/en/", "role": "live-english-docs" }
+      ],
+      "validation": [
+        "decode-all-four-variants",
+        "duration-dimensions-and-frame-rate",
+        "poster-and-hash-integrity",
+        "desktop-and-mobile-presentation",
+        "locale-and-theme-selection",
+        "no-background-variant-playback",
+        "visible-private-data-audit"
+      ],
+      "sourceDelivery": {
+        "appPullRequest": "https://github.com/oneworks-ai/app/pull/263",
+        "appMergeCommit": "3a53db625f9935110defec1005e40d6e93c86615",
+        "docsPullRequest": "https://github.com/oneworks-ai/oneworks-ai.github.io/pull/14",
+        "docsMergeCommit": "d950bb20e7c17304a22dca3f7a0a0a0e1f800140"
+      },
+      "productionArchive": "productions/adapter-promo/2026-08-05/manifest.json"
+    }
+  ]
+}

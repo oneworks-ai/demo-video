@@ -1,0 +1,15 @@
+{
+  "fps": 60,
+  "issueCount": 0,
+  "issues": [],
+  "maxFrameDistancePx": 20.456,
+  "maxSpeedPxPerSecond": 1227.344,
+  "ok": true,
+  "sampleCount": 1800,
+  "thresholds": {
+    "maxFrameDistanceErrorPx": 120,
+    "maxFrameDistanceWarningPx": 72,
+    "maxSpeedErrorPxPerSecond": 7200,
+    "maxSpeedWarningPxPerSecond": 4320
+  }
+}

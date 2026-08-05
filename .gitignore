@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+.logs/
+*.mp4
+*.mov
+*.gif
+*.dmg
+.DS_Store
